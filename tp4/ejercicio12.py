@@ -8,3 +8,22 @@
 # Realizar un programa que lea N
 # e imprima los N primeros términos de esta sucesión
 # como así también la suma de los mismos.
+
+
+n = int(input("Ingrese un numero para calcular su fib: "))
+fibonacci1 = 0
+fibonacci2 = 1
+for i in range(n+1):
+    if(i == 0):
+        print(fibonacci1)
+        
+    elif(i==1):
+        print(fibonacci2)
+    
+    else:
+        print(fibonacci1 + fibonacci2)
+        aux = fibonacci1
+        fibonacci1 = fibonacci2
+        fibonacci2 = fibonacci2 + aux
+
+    
