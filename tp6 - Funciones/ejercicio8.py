@@ -13,3 +13,17 @@
 # positivo n utilizando como primera aproximación a n/2.
 # Detener el proceso cuando la diferencia entre
 # dos cálculos sucesivos sea menor a 0,0001.
+
+n = int(input("INGRESE NUMERO PARA CALCULAR RAIZ CUADRADA --> "))
+while (n<0):
+    print("ERROR NO SE PUEDE CALCULAR RAIZ DE UN NEGATIVO")
+    n = int(input("INGRESE NUMERO PARA CALCULAR RAIZ CUADRADA --> "))
+
+a = (n/2)
+raiz = ((n/a) + a) / 2
+
+while (a-raiz) > 0.0001:
+    a = raiz
+    raiz = ((n/a) + a) / 2
+
+print(f"RAIZ DE {n} es {raiz}")
